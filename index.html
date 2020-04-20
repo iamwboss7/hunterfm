@@ -5,14 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hunter.FM</title>
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    <link rel="stylesheet" href="https://codingeek.net/html/politika/assets/css/flaticon.css">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
 
 </head>
@@ -21,24 +14,65 @@
     rel="stylesheet">
 <script src="https://kit.fontawesome.com/6f1c2acafb.js" crossorigin="anonymous"></script>
 
-
+<script>
+    function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+    }
+    function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+    }
+</script>
 
 <body>
-    <section class="container">
-        <nav class="navbar">
-            <ul class="nav">
-                <li class="nav-item">
-                    <i class="fas fa-sliders-h" aria-hidden="true"></i>
-                </li>
-            </ul>
-            <a class="navbar-brand" href="#"></a>
-            <ul class="nav">
-                <li class="nav-item">
-                    <i class="fas fa-search" aria-hidden="true"></i>
-                </li>
-            </ul>
-        </nav>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="/contact">Fale Conosco</a>
+            <a href="/advertise">Anuncie</a>
+            <a href="/about">Sobre</a>
+            <a href="/ip">Endereços de IP</a>
+            <a href="/top5help">Top 5</a>
+            <a href="https://lnkfi.re/DownloadAppMobile" target="_blank">
+                <img src="https://hunter.fm/img/google-play.png" width="120" alt=""></a>
+        </div>
+    </div>
+    <section class="navigation">
 
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="" href="#">
+                <div class="navbar-brand"></div>
+            </a>
+            <button class="navbar-toggler" onclick="openNav()">
+                MENU
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Fale Conosco</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/advertise">Anuncie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ip">Endereços de IP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/top5help">Top 5</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://lnkfi.re/DownloadAppMobile" target="_blank">
+                            <img src="https://hunter.fm/img/google-play.png" width="120" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <section class="container">
         <div id="top5">
             <div class="pos">1</div>
             <div class="imgtop">
@@ -111,5 +145,12 @@
     </section>
 </body>
 
+<link rel="stylesheet" href="css/ionicons.min.css">
+<link rel="stylesheet" href="https://codingeek.net/html/politika/assets/css/flaticon.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
 </html>

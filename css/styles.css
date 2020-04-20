@@ -1,3 +1,51 @@
+
+.overlay {
+
+    height: 100%;
+    width: 0;
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0, 0.9); 
+    overflow: hidden !important;
+    transition: 0.5s; 
+  }
+  .overlay-content {
+    height: 100vh;
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; 
+    transition: 0.3s; 
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+
 :root {
     --giuliabe: url('https://cdn.hunter.fm/image/thumb/music/iy71rq4ok7quj64a17x7cqbb2s1hr8/100x100ht.jpg');
     --inna: url('https://cdn.hunter.fm/image/thumb/music/rkjftj4zk8rqwj9kx5ajqkj88ev7xb/100x100ht.jpg');
@@ -10,6 +58,15 @@ body {
 .fa-sliders-h, .fa-search {
     color: #8f9397;
     ;
+}
+
+.navigation {
+    margin: 0 auto;
+    max-width: 1040px;
+}
+
+.store img {
+    width: 120px;
 }
 
 #top5 {
@@ -85,7 +142,36 @@ body {
 }
 
 .navbar {
-    height: 100px;
+    height: 70px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.navbar-nav {
+    padding-left: 15px !important;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #ddd !important;
+}
+.nav-link {
+    font-family: Montserrat,sans-serif;
+    padding: 0px 20px !important;
+    line-height: 70px;
+}
+.navbar-toggler {
+    padding-right: 15px !important;
+    color:#FFF !important;
+    text-align: center;
+}
+
+.navbar-nav .nav-link:hover {
+    color:#ffffff!important;
+}
+
+.nav-link img {
+    margin-left: 15px;
 }
 .navbar-brand {
     width: 165px;
@@ -147,6 +233,21 @@ body {
         width: 100px;
    }
 }
+
+.navbar-toggler-icon { 
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color:#FFF;
+}
+
+@media (max-width: 991px){
+    .navbar-brand {
+        justify-content: center !important;
+        align-items: center !important;
+        margin: 0 auto;
+    }
+} 
 
 @media (min-width: 1200px) {
     .container {
