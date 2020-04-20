@@ -1,0 +1,207 @@
+.fa-sliders-h {
+    color: #8f9397;
+    ;
+}
+
+.navbar {
+
+    height: 100px;
+}
+
+
+body {
+    background: #000000 !important;
+}
+
+#top5 {
+    display: -moz-grid;
+    display: -ms-grid;
+    display: grid;
+    width: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+
+    grid-auto-columns: 1fr;
+
+    margin-top: 10px !important;
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    -ms-grid-columns: 1fr 1fr 6fr 1fr;
+    grid-template-columns: 100px 1fr 6fr 1fr;
+
+    max-width: 970px;
+    margin: 0 auto;
+    height: 100px;
+    background: rgba(0, 0, 0, .42);
+    color: #FFF;
+
+}
+
+#top5 .info .singer,
+#wtop5 .info .singer {
+    font-weight: 800;
+}
+
+#top5 .info p,
+#wtop5 .info p {
+    line-height: 1;
+}
+
+#top5 .info,
+#wtop5 .info {
+    margin: 0 0 0 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: #000;
+    width: 100%;
+    font-size: 20px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    resize: vertical;
+}
+
+p {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+
+
+#top5 .vote .button.like,
+#wtop5 .vote .button.like {
+    display: flex;
+    background: url('https://hunter.fm/img/like.png') center no-repeat;
+    background-size: 50px;
+    background-position: center 40%;
+    color: #cf0;
+    font-weight: 700;
+    width: 200px;
+    height: 100px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#top5 .pos,
+#wtop5 .pos {
+    width: 100px;
+    height: 100px;
+    font-size: 45px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 100px;
+
+}
+
+.imgtop {
+    width: 100px;
+    height: 100px;
+    background: url('https://cdn.hunter.fm/image/thumb/music/8oh063k0k8ac8dfwh89ojbsoxqds89/100x100ht.jpg');
+    font-size: 45px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 100px;
+
+}
+
+
+.none {
+    width: 100px;
+    height: 100px;
+    display: none;
+}
+
+.fa-search {
+    color: #8f9397;
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+    #top5 .pos,
+    #wtop5 .pos {
+        display: none;
+
+    }
+
+    .imgtop {
+        background-image: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 0%), url('https://cdn.hunter.fm/image/thumb/music/8oh063k0k8ac8dfwh89ojbsoxqds89/100x100ht.jpg');
+    }
+
+    .none {
+        display: inline;
+    }
+
+    #top5 .info,
+    #wtop5 .info {
+        font-size: 100%;
+    }
+
+    #top5 {
+
+        grid-template-columns: 100px 2fr 1fr;
+    }
+}
+
+
+.itens {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0;
+}
+
+
+.list-item {
+    margin: 20px;
+    display: flex;
+    border-style: solid;
+    border-width: .4rem;
+    border-color: #e4e4e4;
+    background-color: #fff;
+    max-width: 50px;
+    min-height: 50px;
+    padding: 40px 90px;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+}
+
+.list-item i {
+    font-size: 100px;
+    color: #034;
+}
+
+.navbar-brand {
+    width: 165px;
+    height: 30px;
+    background: url('https://hunter.fm/img/logo-hunterfm.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 970px !important;
+    }
+}
