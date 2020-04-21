@@ -426,9 +426,8 @@ body {
     width: 100px;
     height: 100px;
     background: linear-gradient(rgba(0, 0, 0, .75) 0%, rgba(0, 0, 0, .75) 0%), url('https://cdn.hunter.fm/image/thumb/music/iy71rq4ok7quj64a17x7cqbb2s1hr8/100x100ht.jpg');
-    font-size: 45px;
     font-weight: 900;
-    text-align: center;
+    text-align: left;
 }
 
 .imgtopradio .none2 {
@@ -436,6 +435,19 @@ body {
     height: 100px;
     background-size: cover !important;
     display: block;
+}
+
+.imgtopradio .none2 span {
+    width: 40px;
+    background: #c02e2ecb;
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    z-index: 10;
+    font-size: 11px;
+    font-weight: 600;
+    margin-left: 60px;
+    margin-top: 5px;
 }
 
 
