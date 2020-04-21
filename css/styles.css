@@ -137,6 +137,7 @@ body {
 
 .f32 {
     padding: 10px;
+    display: flex;
 }
 
 .f32 .img {
@@ -239,7 +240,7 @@ body {
     align-items: flex-end;
 }
 #top5 .vote .button:hover {
-    transform:scale(1.2);
+    transform:scale(0.8);
     cursor:pointer;
 }
 #top5 .pos, #wtop5 .pos {
