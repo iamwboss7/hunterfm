@@ -79,6 +79,117 @@ body {
     width: 120px;
 }
 
+.boxed2 {
+    display: -moz-grid;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+
+    width: 100%;
+
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+    grid-auto-columns: 1fr;
+
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+
+    -ms-grid-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+
+    margin: 0 auto;
+    color: #FFF;
+}
+
+.f323 {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxed {
+    display: -moz-grid;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+
+    width: 100%;
+
+    margin-top: 15px !important;
+    grid-auto-columns: 1fr;
+
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+
+    -ms-grid-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+
+    margin: 0 auto;
+    color: #FFF;
+}
+
+.f32 {
+    padding: 10px;
+}
+
+.f32 .img {
+    float: left;
+    width: 80px;
+    height: 80px;
+    background:url('https://hunter.fm/img/top5-image.jpg') no-repeat center;
+}
+
+.f32 .img2 {
+    float: left;
+    width: 80px;
+    height: 80px;
+    background:url('https://hunter.fm/img/playlist.png') no-repeat center;
+}
+
+.f32 .img3 {
+    float: left;
+    width: 80px;
+    height: 80px;
+    background:url('https://hunter.fm/img/whatsapp.png') no-repeat center;
+}
+
+.f32 .img4 {
+    float: left;
+    width: 80px;
+    height: 80px;
+    background:url('https://hunter.fm/img/you-tube-live.jpg') no-repeat center;
+}
+
+.f32 .info {
+    padding-left: 15px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    resize: vertical;
+}
+
+.boxed .f32 a {
+    color:#FFF;
+}
+
+.f32 .info .title {
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.f32 .info  .text {
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 600;
+}
+
 #top5 {
     display: -moz-grid;
     display: -ms-grid;
@@ -397,6 +508,10 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+    .boxed {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
     .rap2 {
         height:auto;
     }
