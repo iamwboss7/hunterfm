@@ -51,6 +51,7 @@
     --inna: url('https://cdn.hunter.fm/image/thumb/music/rkjftj4zk8rqwj9kx5ajqkj88ev7xb/100x100ht.jpg');
     --kygo: url('https://cdn.hunter.fm/image/thumb/music/y2kmiv3dk8aclb03bvtsjdydlkc1n1/100x100ht.jpg');
     --bastille: url('https://cdn.hunter.fm/image/thumb/music/b9xybm8njo6fvj3122fehqq6xp36ug/100x100ht.jpg');
+    --pop: url('https://cdn.hunter.fm/image/station/pop.png');
 }
 body {
     background: #000000 !important;
@@ -96,7 +97,6 @@ body {
 #top5 .info, #wtop5 .info {
     padding-left: 15px;
     padding-right: 15px;
-    background: #000;
     font-size: 20px;
     width: calc(100%);
     text-transform: uppercase;
@@ -140,6 +140,139 @@ body {
     height: 100px;
     display: none;
 }
+
+.rap2 {
+    display: flex;
+    width: 100%;
+    max-width: 970px;
+    height: 250px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.rap2 img {
+    width: 100%;
+    max-width: 970px;
+    height: auto;
+}
+
+.rap img {
+    width: 100%;
+    max-width: 728px;
+    height: auto;
+}
+
+.rap {
+    display: flex;
+    width: 100%;
+    max-width: 970px;
+    height: 106px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice_title {
+    display: flex;
+    width: 100%;
+    max-width: 970px;
+    height: 70px;
+    line-height: 70px;
+    justify-content: center;
+    align-items: center;
+    font-family: open sans,Arial;
+    font-size: 35px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+/* radio */
+
+#radio {
+    display: -moz-grid;
+    display: -ms-grid;
+    display: grid;
+    width: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    grid-auto-columns: 1fr;
+    margin-top: 10px !important;
+    -ms-grid-columns: 1fr 5fr 2fr 1fr;
+    grid-template-columns: 100px 5fr 2fr 1fr;
+    max-width: 970px;
+    margin: 0 auto;
+    height: 100px;
+    color: #FFF;
+}
+#radio .info .singer {
+    font-weight: 800;
+}
+#radio .info {
+    line-height: 1;
+}
+#radio .info {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 22px;
+    width: calc(100%);
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+}
+#radio .vote {
+    display: flex;
+    color: #fff;
+    font-weight: 800;
+    font-size: 15px;
+    height: 100px;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+    word-wrap: break-word;
+}
+
+#radio .vote .genre {
+    padding-right: 16px;
+    text-align: right;
+}
+
+#radio .play {
+    width: 60px;
+    height: 105.5px;
+    background: url('https://hunter.fm/img/play-btn.png') left no-repeat;
+    background-size: 60px;
+    transition: all .1s;
+
+}
+
+#radio .vote .play:hover { 
+    transform:scale(1.2);
+    cursor:pointer;
+}
+
+.imgtopradio {
+    width: 100px;
+    height: 100px;
+    background-image: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 0%), url('https://cdn.hunter.fm/image/thumb/music/8oh063k0k8ac8dfwh89ojbsoxqds89/100x100ht.jpg');
+    font-size: 45px;
+    font-weight: 900;
+    text-align: center;
+    line-height: 100px;
+}
+
+.imgtopradio .none {
+    display: block;
+}
+
 
 .navbar {
     height: 70px;
@@ -204,6 +337,16 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+    .rap2 {
+        height:auto;
+    }
+    .rap {
+        height:auto;
+    }
+    .choice_title {
+        font-size: 100%;
+        height: auto;
+    }
     #top5 .pos, #wtop5 .pos {
         display: none;
    }
@@ -224,6 +367,15 @@ body {
     #top5 {
         grid-template-columns: 100px auto 100px;
    }
+   #radio .info {
+    font-size: 15px;
+    margin: 5px 0 0 0;
+    justify-content: flex-start;
+}
+
+#radio .vote .genre {
+    font-size: 12px;
+} 
     #top5 .info {
         font-size: 15px;
         margin: 5px 0 0 0;
