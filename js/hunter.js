@@ -128,7 +128,8 @@ const sHunter = {
                     '<div class="title">' + music[i].name + sHunter.montarNomes(music[i].feats, aux ? " (feat. " : " [feat. ", aux ? ")" : "]") + '</div>' +
                     '</div>' +
                     '</div>' +
-                    '</div>');
+                    '</div>'
+                );
             }
             if (music.length == 0)
                 sHunter.notifyBar('.show_share', 'warning', 10000, 'NÃ£o foi encontrado resultado para sua busca.');
@@ -456,6 +457,9 @@ const sHunter = {
                 $("#wtop5[hash='" + _m.hash + "'] img").attr("src", _m.thumb ? _m.thumb["MDPI"] : sHunter.imgDefault);
             });
         }
+        $(".topwinlist").append('<div class="rap mt-5 mb-5">' +
+            '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRnAoI7In21z-4wyge5v9WCjuIZ0l1Wa47fiJ8iCzZRi5stGdpE&usqp=CAU" alt="">' +
+            '</div>');
     },
     updateListInsert: function () {
         for (let i = 0; i < sHunter.musicsInsertList.length; i++) {
