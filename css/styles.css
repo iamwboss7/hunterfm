@@ -200,6 +200,100 @@ body {
     font-weight: 600;
 }
 
+.top56 {
+    display: -moz-grid;
+    display: -ms-grid;
+    display: grid;
+    width: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    grid-auto-columns: 1fr;
+    margin-top: 10px !important;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 970px;
+    margin: 0 auto;
+    height: 100px;
+    color: #FFF;
+}
+
+.show_share {
+    display: -moz-grid;
+    display: -ms-grid;
+    display: grid;
+    width: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    grid-auto-columns: 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 970px;
+    margin: 0 auto;
+    height: 100px;
+    color: #FFF;
+}
+
+.sep {
+    display: -moz-grid;
+    display: -ms-grid;
+    display: grid;
+    width: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    grid-auto-columns: 1fr;
+    -ms-grid-columns: 100px 1fr;
+    grid-template-columns: 100px 1fr;
+}
+
+#top5_box {
+    margin-top: 10px;
+}
+
+#top5_box .cover {
+    float: left;
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+
+#top5_box .infos {
+    padding: 5px;
+    width: 100%;
+    text-transform: uppercase;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#top5_box .singer {
+    margin-left: 5px;
+    width: 100%;
+    height: auto;
+    color: #fff;
+    font-weight: 800;
+    font-size: 14px;
+    display: inline-block;
+    line-height: normal;
+}
+
+#top5_box .title {
+    margin-left: 5px;
+    width: 100%;
+    height: auto;
+    color: #fff;
+    font-variant: normal;
+    font-size: 12px;
+    display: inline-block;
+    line-height: normal;
+}
+
+
+
 #top5 {
     display: -moz-grid;
     display: -ms-grid;
@@ -217,7 +311,55 @@ body {
     margin: 0 auto;
     height: 100px;
     color: #FFF;
+    position:absolute;
 }
+
+#wtop5 {
+    display: -moz-grid;
+    display: -ms-grid;
+    display: grid;
+    width: 100%;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    grid-auto-columns: 1fr;
+    margin-top: 10px !important;
+    -ms-grid-columns: 1fr 1fr 6fr 1fr;
+    grid-template-columns: 100px 1fr 6fr 1fr;
+    max-width: 970px;
+    margin: 0 auto;
+    height: 100px;
+    color: #FFF;
+}
+
+#top5_result .title {
+    width: 550px;
+    height: 60px;
+    background: url('../img/result.png') 115px center no-repeat;
+    margin: 0 auto 25px;
+    padding: 15px 0 0 0;
+    text-align: center;
+}
+
+#top5 .vote.on .button:not([vote=true]):hover, #wtop5 .vote.on .button:not([vote=true]):hover {
+    cursor: not-allowed;
+    transform: scale(1);
+}
+
+#top5 .vote.on .button:not([vote=true]), #wtop5 .vote.on .button:not([vote=true]) {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: url(grayscale.svg#greyscale);
+    filter: gray;
+    -webkit-filter: grayscale(1);
+    opacity: .5;
+}
+
+
 #top5 .info .singer, #wtop5 .info .singer {
     font-weight: 800;
 }
@@ -248,32 +390,117 @@ body {
     justify-content: center;
     align-items: flex-end;
 }
+#top5 .vote .button {
+    transition: all 0.25s;
+}
 #top5 .vote .button:hover {
     transform:scale(0.8);
     cursor:pointer;
+    transition: all 0.5s;
+}
+#content .hr {
+    display: block;
+    height: 5px;
+    margin: 0 auto;
+    border: 0;
+    background: #8c29fd;
+    background: -moz-linear-gradient(left,rgba(140,41,253,1) 0%,rgba(172,33,174,1) 55%,rgba(254,113,37,1) 100%);
+    background: -webkit-gradient(left top,right top,color-stop(0%,rgba(140,41,253,1)),color-stop(55%,rgba(172,33,174,1)),color-stop(100%,rgba(254,113,37,1)));
+    background: -webkit-linear-gradient(left,rgba(140,41,253,1) 0%,rgba(172,33,174,1) 55%,rgba(254,113,37,1) 100%);
+    background: -o-linear-gradient(left,rgba(140,41,253,1) 0%,rgba(172,33,174,1) 55%,rgba(254,113,37,1) 100%);
+    background: -ms-linear-gradient(left,rgba(140,41,253,1) 0%,rgba(172,33,174,1) 55%,rgba(254,113,37,1) 100%);
+    background: linear-gradient(to right,rgba(140,41,253,1) 0%,rgba(172,33,174,1) 55%,rgba(254,113,37,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c29fd',endColorstr='#fe7125',GradientType=1 );
+}
+#content .result {
+    width: 100%;
+    max-width: 970px;
+    height: 50px;
+    line-height: 50px;
+    background: transparent;
+    margin: 0 0 10px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    justify-content: center;
+    align-items: center;
+}
+#content .top5_desc {
+    width: 100%;
+    max-width: 970px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+#content .top5_title {
+    width: 100%;
+    max-width: 970px;
+    height: 58px;
+    background: url('https://hunter.fm/img/top5_logov2.png') center no-repeat;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+}
+.ninta {
+    width: 100%;
+    height: 90px;
+    background: url('https://hunter.fm/img/ninta.png') no-repeat center;
+    background-size: 60%;
+    transition: all .3s;
+}
+.stereotool:hover, .ninta:hover {
+    transform: scale(1.2);
+    transition: all .3s;
+}
+.stereotool {
+    width: 100%;
+    height: 90px;
+    background: url('https://hunter.fm/img/stereotool.png') no-repeat center;
+    background-size: 60%;
+    transition: all .3s;  
+}
+#content .result span {
+    color: #a84ef1;
+}
+#content .toys {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+#content .toys p {
+    font-size: 78px;
+    font-weight: 700;
+    line-height: 1;
+    color:#FFF;
 }
 #top5 .pos, #wtop5 .pos {
     width: 100px;
     height: 100px;
+    line-height: 100px;
+    background:linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 0%);
     font-size: 45px;
     font-weight: 900;
     text-align: center;
-    line-height: 100px;
 }
 .imgtop {
     width: 100px;
     height: 100px;
-    background: url('https://cdn.hunter.fm/image/thumb/music/8oh063k0k8ac8dfwh89ojbsoxqds89/100x100ht.jpg');
     font-size: 45px;
     font-weight: 900;
     text-align: center;
-    line-height: 100px;
 }
 .none {
     width: 100px;
     height: 100px;
     background-size:cover !important;
     display: none;
+    justify-content: center;
+    align-items: center;
 }
 
 .share_music {
@@ -387,13 +614,13 @@ a:hover {
     height: 100px;
     color: #FFF;
 }
-#radio .info .singer {
+#radio .info .singer, #wtop5 .info .singer {
     font-weight: 800;
 }
-#radio .info {
+#radio .info, #wtop5 .info .singer {
     line-height: 1;
 }
-#radio .info {
+#radio .info, #wtop5 .info {
     padding-left: 15px;
     padding-right: 15px;
     font-size: 22px;
@@ -440,7 +667,6 @@ a:hover {
     width: 100px;
     height: 100px;
     font-weight: 900;
-    background:linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 0%);
     text-align: left;
 }
 
@@ -533,6 +759,13 @@ a:hover {
     border-radius: .5rem;
 }
 
+@media screen and (max-width: 1050px){
+    .show_share {
+        -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @media screen and (max-width: 1019px){
     .navigation {
         max-width: 100vh !important;
@@ -541,6 +774,9 @@ a:hover {
 }
 
 @media screen and (max-width: 767px) {
+    .pos {
+        position: absolute;
+    }
     .boxed {
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -555,9 +791,11 @@ a:hover {
         font-size: 100%;
         height: auto;
     }
-    #top5 .pos, #wtop5 .pos {
-        display: none;
-   }
+
+    #content .toys p {
+        font-size: 36px;
+    }
+
     .imgtop {
         background-image: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 0%), url('https://cdn.hunter.fm/image/thumb/music/8oh063k0k8ac8dfwh89ojbsoxqds89/100x100ht.jpg');
    }
@@ -573,18 +811,23 @@ a:hover {
     .none {
         display: inline;
    }
-    #top5 {
+    #top5, #wtop5 {
         grid-template-columns: 100px auto 100px;
    }
-   #radio .info {
+   #radio .info, #wtop5 .info {
+    padding-left: 5px;
     font-size: 15px;
     margin: 5px 0 0 0;
     justify-content: flex-start;
-}
+   }
+    #top5 .info, #wtop5 .info {
+padding-left: 5px;
+    }
 
-#radio .vote .genre {
+
+    #radio .vote .genre {
     font-size: 12px;
-} 
+    } 
     #top5 .info {
         font-size: 15px;
         margin: 5px 0 0 0;

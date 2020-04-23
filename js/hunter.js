@@ -119,12 +119,14 @@ const sHunter = {
                     return a.toUpperCase();
                 });
                 $(".show_share").append('<div id="top5_box" class="' + (!check ? "block" : "") + '" hash="' + music[i].hash + '" onClick="sHunter.add(this);">' +
+                    '<div class="sep">' +
                     '<div class="cover">' +
                     '<img src="' + (music[i].thumb ? music[i].thumb["MDPI"] : sHunter.imgDefault) + '">' +
                     '</div>' +
                     '<div class="infos">' +
                     '<div class="singer">' + sHunter.montarNomes(music[i].singers) + '</div>' +
                     '<div class="title">' + music[i].name + sHunter.montarNomes(music[i].feats, aux ? " (feat. " : " [feat. ", aux ? ")" : "]") + '</div>' +
+                    '</div>' +
                     '</div>' +
                     '</div>');
             }
@@ -171,6 +173,7 @@ const sHunter = {
             } else {
                 $("#top5[hash='" + sHunter.sTop5.station.music[i].hash + "']").removeClass("empate");
                 $("#top5[hash='" + sHunter.sTop5.station.music[i].hash + "'] .pos").html(pos);
+                $("#top5[hash='" + sHunter.sTop5.station.music[i].hash + "'] .none").html(pos);
                 pos++;
             }
             $("#top5[hash='" + sHunter.sTop5.station.music[i].hash + "']").animate({
@@ -337,16 +340,17 @@ const sHunter = {
                 const aux = !(music.name.indexOf("(") > -1);
                 $(".toplist").append('<div id="top5" hash="' + music.hash + '" onClick="sHunter.votar(this);">' +
                     '<div class="pos">' + (i + 1) + '</div>' +
+                    '<div class="imgtop">' +
                     '<img src="img/default_cover.jpg"/>' +
+                    '</div>' +
                     '<div class="info">' +
-                    '<p class="singer">' + sHunter.montarNomes(music.singers) + '</p>' +
-                    '<p class="music">' + music.name.toLowerCase().replace(/(?:^|\s)\S/g, function (a) {
+                    '<div class="singer">' + sHunter.montarNomes(music.singers) + '</div>' +
+                    '<div class="music">' + music.name.toLowerCase().replace(/(?:^|\s)\S/g, function (a) {
                         return a.toUpperCase();
-                    }) + sHunter.montarNomes(music.feats, aux ? " (feat. " : " [feat. ", aux ? ")" : "]") + '</p>' +
+                    }) + sHunter.montarNomes(music.feats, aux ? " (feat. " : " [feat. ", aux ? ")" : "]") + '</div>' +
                     '</div>' +
                     '<div class="vote ' + ((music.blockVote || sHunter.sTop5.station.votes.indexOf(music.hash) > -1) ? 'on' : '') + '">' +
                     '<div class="button like">' + music.votes.like + '</div>' +
-                    '<div class="progress" style="width:100%"></div>' +
                     '</div>' +
                     '</div>');
                 sHunter.loadMusic(music, sHunter.showMusicTop5);
@@ -388,17 +392,18 @@ const sHunter = {
             const music = data.data;
             const aux = !(music.name.indexOf("(") > -1);
             $(".toplist").append('<div id="top5" hash="' + music.hash + '" onClick="sHunter.votar(this);">' +
-                '<div class="pos">' + sHunter.sTop5.station.music.length + '</div>' +
+                '<div class="pos">' + (i + 1) + '</div>' +
+                '<div class="imgtop">' +
                 '<img src="img/default_cover.jpg"/>' +
+                '</div>' +
                 '<div class="info">' +
-                '<p class="singer">' + sHunter.montarNomes(music.singers) + '</p>' +
-                '<p class="music">' + music.name.toLowerCase().replace(/(?:^|\s)\S/g, function (a) {
+                '<div class="singer">' + sHunter.montarNomes(music.singers) + '</div>' +
+                '<div class="music">' + music.name.toLowerCase().replace(/(?:^|\s)\S/g, function (a) {
                     return a.toUpperCase();
-                }) + sHunter.montarNomes(music.feats, aux ? " (feat. " : " [feat. ", aux ? ")" : "]") + '</p>' +
+                }) + sHunter.montarNomes(music.feats, aux ? " (feat. " : " [feat. ", aux ? ")" : "]") + '</div>' +
                 '</div>' +
                 '<div class="vote ' + (music.blockVote ? '.on' : '') + '">' +
                 '<div class="button like">' + music.votes.like + '</div>' +
-                '<div class="progress" style="width:100%"></div>' +
                 '</div>' +
                 '</div>');
             sHunter.loadMusic(music, sHunter.showMusicTop5);
@@ -434,16 +439,17 @@ const sHunter = {
             const aux = !(music.name.indexOf("(") > -1);
             $(".topwinlist").append('<div id="wtop5" hash="' + music.hash + '">' +
                 '<div class="pos">' + (i + 1) + '</div>' +
+                '<div class="imgtop">' +
                 '<img src="img/default_cover.jpg"/>' +
+                '</div>' +
                 '<div class="info">' +
-                '<p class="singer">' + sHunter.montarNomes(music.singers) + '</p>' +
-                '<p class="music">' + music.name.toLowerCase().replace(/(?:^|\s)\S/g, function (a) {
+                '<div class="singer">' + sHunter.montarNomes(music.singers) + '</div>' +
+                '<div class="music">' + music.name.toLowerCase().replace(/(?:^|\s)\S/g, function (a) {
                     return a.toUpperCase();
-                }) + sHunter.montarNomes(music.feats, aux ? " (feat. " : " [feat. ", aux ? ")" : "]") + '</p>' +
+                }) + sHunter.montarNomes(music.feats, aux ? " (feat. " : " [feat. ", aux ? ")" : "]") + '</div>' +
                 '</div>' +
                 '<div class="vote on">' +
-                '<div class="button like">' + music.votes.like + '</div>' +
-                '<div class="progress" style="width:100%"></div>' +
+                '<div class="button like not">' + music.votes.like + '</div>' +
                 '</div>' +
                 '</div>');
             sHunter.loadMusic(music, (_m) => {
