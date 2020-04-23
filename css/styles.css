@@ -4,7 +4,7 @@
     height: 0;
     width: 100%;
     position: fixed; 
-    z-index: 1;
+    z-index: 1005;
     left: 0;
     top: 0;
     background-color: rgba(0,0,0, 0.9); 
@@ -75,6 +75,7 @@ body {
     width: 100%;
     background:#000;
     position: fixed;
+    z-index:1000;
     top: 0;
     bottom: 0;
     right: 0;
@@ -104,9 +105,6 @@ body {
     margin-top: 15px !important;
     margin-bottom: 15px !important;
     grid-auto-columns: 1fr;
-
-    grid-column-gap: 24px;
-    grid-row-gap: 24px;
 
     -ms-grid-columns: repeat(4, 1fr);
     grid-template-columns: repeat(4, 1fr);
@@ -309,8 +307,13 @@ body {
     color:#FFF;
 }
 
+a:hover {
+    text-decoration: none !important;
+}
+
 .note a:hover {
     color:#03f;
+    text-decoration: none;
 }
 
 .rap2 {
@@ -436,9 +439,16 @@ body {
 .imgtopradio {
     width: 100px;
     height: 100px;
-    background: linear-gradient(rgba(0, 0, 0, .75) 0%, rgba(0, 0, 0, .75) 0%), url('https://cdn.hunter.fm/image/thumb/music/iy71rq4ok7quj64a17x7cqbb2s1hr8/100x100ht.jpg');
     font-weight: 900;
+    background:linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 0%);
     text-align: left;
+}
+
+.imgtopradio img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: -1000;
 }
 
 .imgtopradio .none2 {
