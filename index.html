@@ -15,8 +15,30 @@
 <script src="https://kit.fontawesome.com/6f1c2acafb.js" crossorigin="anonymous"></script>
 
 <script>
+    var isMobile = {
+        Android: function () {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function () {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function () {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function () {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function () {
+            return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+        },
+        any: function () {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
+
     function openNav() {
         document.getElementById("myNav").style.height = "100%";
+
     }
     function closeNav() {
         document.getElementById("myNav").style.height = "0%";
@@ -318,9 +340,9 @@
                 resultado
                 <span>Clique aqui!</span></button>
             <div id="top5_result" style="display: none;">
-                <button class="close" title="Fechar resultado">Fechar</button>
+                <!--<button class="close" title="Fechar resultado">Fechar</button>-->
                 <div class="title">
-                    <h1>Resultado <span>TOP</span> 5</h1>
+                    <div class="toptitle">Resultado <span>TOP5</span></div>
                     <p>Confira o último resultado das votações!</p>
                 </div>
                 <div class="topwinlist"></div>
@@ -370,5 +392,14 @@
 <script src="js/hunter.js"></script>
 
 <script src="https://hunter.fm/script.js"></script>
+
+<script>
+    $(window).resize(function () {
+        var hwidth = window.innerWidth;
+        if (hwidth > 992) {
+            closeNav();
+        }
+    });
+</script>
 
 </html>

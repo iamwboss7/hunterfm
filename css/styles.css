@@ -1,3 +1,13 @@
+::-webkit-scrollbar {
+    width: 13px;
+}
+::-webkit-scrollbar-thumb {
+    background: #bebebe;
+}
+::-webkit-scrollbar-track {
+    background: #2b2b2b;
+}
+
 
 .overlay {
 
@@ -36,6 +46,8 @@
     right: 45px;
     font-size: 60px;
   }
+
+
   
   @media screen and (max-height: 450px) {
     .overlay a {font-size: 20px}
@@ -333,13 +345,29 @@ body {
     color: #FFF;
 }
 
-#top5_result .title {
-    width: 550px;
-    height: 60px;
-    background: url('../img/result.png') 115px center no-repeat;
-    margin: 0 auto 25px;
-    padding: 15px 0 0 0;
+#top5_result .title { 
+    font-weight: 500;
+    max-width: 970px;
     text-align: center;
+    color: #FFF;
+}
+
+#top5_result .title .toptitle span {
+    font-weight: 800;
+    font-style: italic;
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#top5_result .toptitle {
+    font-size: 20px;
+}
+
+#top5_result .title p {
+    font-size: 12px;
 }
 
 #top5 .vote.on .button:not([vote=true]):hover, #wtop5 .vote.on .button:not([vote=true]):hover {
@@ -767,12 +795,14 @@ a:hover {
     }
 }
 
-@media screen and (max-width: 1019px){
-    .navigation {
-        max-width: 100vh !important;
-        width: 100%;
+@media screen and (max-width: 1016px){
+    .nav-link {
+        font-family: Montserrat,sans-serif;
+        padding: 0px 15px !important;
+        line-height: 70px;
     }
 }
+
 
 @media screen and (max-width: 767px) {
     .pos {
@@ -781,6 +811,10 @@ a:hover {
     .boxed {
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    }
+
+    .genre {
+        display: none;
     }
     .rap2 {
         height:auto;
@@ -814,6 +848,10 @@ a:hover {
    }
     #top5, #wtop5 {
         grid-template-columns: 100px auto 100px;
+   }
+   #radio {
+    -ms-grid-columns: 1fr 5fr 0fr 1fr;
+    grid-template-columns: 100px 5fr 0fr 1fr;
    }
    #radio .info, #wtop5 .info {
     padding-left: 5px;
