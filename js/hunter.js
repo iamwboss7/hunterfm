@@ -260,7 +260,7 @@ const sHunter = {
             by
         } = sHunter.checkInsert(hash);
         if (!check) {
-            sHunter.notifyBar('.show_share', 'error', 10000, 'NÃ£o Ã© posivel inserir mais mÃºsica do(a) cantor(a) ' + by.toUpperCase() + ', ele jÃ¡ estÃ¡ presente em 4 musicas.');
+            sHunter.notifyBar('.show_share', 'error', 10000, 'Não foi possível inserir mais músicas do(a) cantor(a) ' + by.toUpperCase() + ', ele já está presente em 4 musicas.');
         } else {
             $(_this).addClass("loading");
             setTimeout(() => {

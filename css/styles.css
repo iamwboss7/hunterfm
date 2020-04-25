@@ -10,7 +10,6 @@
 
 
 .overlay {
-
     height: 0;
     width: 100%;
     position: fixed; 
@@ -22,7 +21,6 @@
     transition: 0.3s ease; 
   }
   .overlay-content {
-    height: 100vh;
     text-align: center;
     margin-top: 100px;
   }
@@ -345,6 +343,10 @@ body {
     color: #FFF;
 }
 
+#top5:hover {
+    cursor:pointer;   
+}
+
 #top5_result .title { 
     font-weight: 500;
     max-width: 970px;
@@ -360,6 +362,11 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+#top5.empate {
+    transform: scale(.9);
+    opacity: .8;
 }
 
 #top5_result .toptitle {
@@ -793,6 +800,9 @@ a:hover {
         -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     }
+    #top5_box .infos {
+        padding: 0;
+    }
 }
 
 @media screen and (max-width: 1016px){
@@ -834,14 +844,6 @@ a:hover {
     .imgtop {
         background-image: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 0%), url('https://cdn.hunter.fm/image/thumb/music/8oh063k0k8ac8dfwh89ojbsoxqds89/100x100ht.jpg');
    }
-
-   :root {
-    --giuliabe: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 0%), url('https://cdn.hunter.fm/image/thumb/music/iy71rq4ok7quj64a17x7cqbb2s1hr8/100x100ht.jpg');
-    --inna: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 0%), url('https://cdn.hunter.fm/image/thumb/music/rkjftj4zk8rqwj9kx5ajqkj88ev7xb/100x100ht.jpg');
-    --kygo: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 0%), url('https://cdn.hunter.fm/image/thumb/music/y2kmiv3dk8aclb03bvtsjdydlkc1n1/100x100ht.jpg');
-    --bastille: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 0%), url('https://cdn.hunter.fm/image/thumb/music/b9xybm8njo6fvj3122fehqq6xp36ug/100x100ht.jpg');
-    --giangiovani: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0, 0, 0, .50) 0%), url('https://cdn.hunter.fm/image/thumb/music/ayk8kgfxjq5uot06kbkh8hh7v728xu/100x100ht.jpg');    
-}
 
     .none {
         display: inline;
