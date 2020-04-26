@@ -121,9 +121,7 @@ body {
     padding: 0px 20px !important;
     line-height: 70px;
 }
-.navbar-nav .nav-link:hover {
-    color:#ffffff!important;
-}
+
 .nav-link img {
     margin-left: 15px;
 }
@@ -796,6 +794,9 @@ a:hover {
     width: 100%;
     grid-auto-columns: 1fr;
 
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+
     -ms-grid-columns: repeat(4, 1fr);
     grid-template-columns: repeat(4, 1fr);
 
@@ -814,10 +815,19 @@ a, a:hover, a:active, a:focus {
         background: url('https://hunter.fm/img/hunterfm_logo_white.png') no-repeat center;
   }
 
+  .footer .stereotool:hover {
+    transform:none;
+    cursor:pointer;
+  }
+
   .footer nav {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     resize: vertical;
+}
+
+.footer nav ul {
+    margin-bottom: 0px;
 }
 
 .footer nav li {
@@ -838,6 +848,10 @@ a, a:hover, a:active, a:focus {
     flex-direction: column;
     justify-content: center;
     resize: vertical;
+}
+
+.footer .social ul {
+    margin-bottom: 0px;
 }
 
 .footer .social li {
@@ -891,6 +905,10 @@ footer .copy a:hover {
     .footer {
         -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    }
+
+    .footer nav {
+        justify-content: center;
     }
     
     .pos {
