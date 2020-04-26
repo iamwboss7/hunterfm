@@ -381,19 +381,19 @@ const sHunter = {
         musicVote: function (data) {
             const music = data.data.music;
             const user = data.data.user;
-            $("#top5[hash='" + music.hash + "'] .vote .like").html(music.votes.like);
+            $("#top5 [hash='" + music.hash + "'] .vote .like").html(music.votes.like);
             for (let i = 0; i < sHunter.sTop5.station.music.length; i++)
                 if (music.hash == sHunter.sTop5.station.music[i].hash)
                     sHunter.sTop5.station.music[i].votes.like = music.votes.like;
             if (sHunter.sTop5.user == user)
-                $("#top5[hash='" + music.hash + "'] .vote").addClass("on");
+                $("#top5 [hash='" + music.hash + "'] .vote").addClass("on");
             sHunter.arrumar();
         },
         musicAdd: function (data) {
             const music = data.data;
             const aux = !(music.name.indexOf("(") > -1);
-            $(".toplist").append('<div id="top5" hash="' + music.hash + '" onClick="sHunter.votar(this);">' +
-                '<div class="pos">' + (i + 1) + '</div>' +
+            $(".toplist").append('<div id="top5"hash="' + music.hash + '" onClick="sHunter.votar(this);">' +
+                '<div class="pos">' + sHunter.sTop5.station.music.length + '</div>' +
                 '<div class="imgtop">' +
                 '<img src="img/default_cover.jpg"/>' +
                 '</div>' +

@@ -1,3 +1,24 @@
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css');
+
+:root {
+    --pop: url('https://cdn.hunter.fm/image/station/pop.png') center no-repeat;
+    --rock: url('https://cdn.hunter.fm/image/station/rock.png') center no-repeat;
+    --sertanejo: url('https://cdn.hunter.fm/image/station/sertanejo.png') center no-repeat;
+    --pop2k: url('https://cdn.hunter.fm/image/station/pop2k.png') center no-repeat;
+    --oitentas: url('https://cdn.hunter.fm/image/station/80s.png') center no-repeat;
+    --lofi: url('https://cdn.hunter.fm/image/station/lo-fi.png') center no-repeat;
+    --popncs: url('https://cdn.hunter.fm/image/station/pop&ncs.png') center no-repeat;
+    --fresh: url('https://cdn.hunter.fm/image/station/fresh.png') center no-repeat;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
 ::-webkit-scrollbar {
     width: 13px;
 }
@@ -8,6 +29,9 @@
     background: #2b2b2b;
 }
 
+body {
+    background: #000000 !important;
+}
 
 .overlay {
     height: 0;
@@ -45,41 +69,7 @@
     font-size: 60px;
   }
 
-
-  
-  @media screen and (max-height: 450px) {
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
-    }
-  }
-
-:root {
-    --giuliabe: url('https://cdn.hunter.fm/image/thumb/music/iy71rq4ok7quj64a17x7cqbb2s1hr8/100x100ht.jpg');
-    --inna: url('https://cdn.hunter.fm/image/thumb/music/rkjftj4zk8rqwj9kx5ajqkj88ev7xb/100x100ht.jpg');
-    --kygo: url('https://cdn.hunter.fm/image/thumb/music/y2kmiv3dk8aclb03bvtsjdydlkc1n1/100x100ht.jpg');
-    --bastille: url('https://cdn.hunter.fm/image/thumb/music/b9xybm8njo6fvj3122fehqq6xp36ug/100x100ht.jpg');
-    --giangiovani: url('https://cdn.hunter.fm/image/thumb/music/ayk8kgfxjq5uot06kbkh8hh7v728xu/100x100ht.jpg');
-    --pop: url('https://cdn.hunter.fm/image/station/pop.png') center no-repeat;
-    --rock: url('https://cdn.hunter.fm/image/station/rock.png') center no-repeat;
-    --sertanejo: url('https://cdn.hunter.fm/image/station/sertanejo.png') center no-repeat;
-    --pop2k: url('https://cdn.hunter.fm/image/station/pop2k.png') center no-repeat;
-    --oitentas: url('https://cdn.hunter.fm/image/station/80s.png') center no-repeat;
-    --lofi: url('https://cdn.hunter.fm/image/station/lo-fi.png') center no-repeat;
-    --popncs: url('https://cdn.hunter.fm/image/station/pop&ncs.png') center no-repeat;
-    --fresh: url('https://cdn.hunter.fm/image/station/fresh.png') center no-repeat;
-}
-body {
-    background: #000000 !important;
-}
-.fa-sliders-h, .fa-search {
-    color: #8f9397;
-    ;
-}
-
-.navigation {
+  .navigation {
     margin: 0 auto;
     max-width: 1040px;
     width: 100%;
@@ -93,8 +83,55 @@ body {
     height: 70px;
 }
 
+.navbar {
+    height: 70px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.navbar-nav {
+    padding-left: 15px !important;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #ddd !important;
+}
+.navbar-brand {
+    width: 165px;
+    height: 30px;
+    background: url('https://hunter.fm/img/logo-hunterfm.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.nav-link {
+    font-family: Montserrat,sans-serif;
+    padding: 0px 20px !important;
+    line-height: 70px;
+}
+.navbar-nav .nav-link:hover {
+    color:#ffffff!important;
+}
+.nav-link img {
+    margin-left: 15px;
+}
+.navbar-toggler {
+    padding-right: 15px !important;
+    color:#FFF !important;
+    text-align: center;
+}
+
 .mt-70 {
-    margin-top:70px;
+    margin-top: 80px !important;
+}
+
+.fa-sliders-h, .fa-search {
+    color: #8f9397;
+    ;
 }
 
 .store img {
@@ -367,6 +404,10 @@ body {
 #top5.empate {
     transform: scale(.9);
     opacity: .8;
+}
+
+#top5_result {
+    display: none;
 }
 
 #top5_result .toptitle {
@@ -733,67 +774,6 @@ a:hover {
 }
 
 
-.navbar {
-    height: 70px;
-    font-size: 12px;
-    letter-spacing: 1px;
-    text-decoration: none;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-.navbar-nav {
-    padding-left: 15px !important;
-}
-.navbar-light .navbar-nav .nav-link {
-    color: #ddd !important;
-}
-.nav-link {
-    font-family: Montserrat,sans-serif;
-    padding: 0px 20px !important;
-    line-height: 70px;
-}
-.navbar-toggler {
-    padding-right: 15px !important;
-    color:#FFF !important;
-    text-align: center;
-}
-
-.navbar-nav .nav-link:hover {
-    color:#ffffff!important;
-}
-
-.nav-link img {
-    margin-left: 15px;
-}
-.navbar-brand {
-    width: 165px;
-    height: 30px;
-    background: url('https://hunter.fm/img/logo-hunterfm.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-}
-
-.list-item {
-    margin: 20px;
-    display: flex;
-    border-style: solid;
-    border-width: .4rem;
-    border-color: #e4e4e4;
-    background-color: #fff;
-    max-width: 50px;
-    min-height: 50px;
-    padding: 40px 90px;
-    text-align: center;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
-    border-radius: .5rem;
-}
 
 @media screen and (max-width: 1050px){
     .show_share {
@@ -879,12 +859,7 @@ padding-left: 5px;
    }
 }
 
-.navbar-toggler-icon { 
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    color:#FFF;
-}
+
 
 @media (max-width: 991px){
     .navbar-brand {
@@ -899,3 +874,14 @@ padding-left: 5px;
         max-width: 970px !important;
    }
 }
+
+
+  
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
