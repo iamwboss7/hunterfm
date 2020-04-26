@@ -10,11 +10,21 @@
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    outline: none;
     box-sizing: border-box;
+    margin: 0;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-appearance: none;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    border-color: initial;
+    border-image: initial;
+    border-style: initial;
+    border-width: 0;
+    font-weight: inherit;
+    outline: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
 }
 
 ::-webkit-scrollbar {
@@ -278,7 +288,6 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 970px;
     margin: 0 auto;
-    height: 100px;
     color: #FFF;
 }
 
@@ -705,6 +714,9 @@ a:hover {
     justify-content: center;
     word-wrap: break-word;
     text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    overflow: hidden;
 }
 #radio .vote {
     display: flex;
@@ -728,13 +740,14 @@ a:hover {
     height: 105.5px;
     background: url('https://hunter.fm/img/play-btn.png') left no-repeat;
     background-size: 60px;
-    transition: all .1s;
+    transition: all .2s;
 
 }
 
 #radio .play:hover { 
     transform:scale(1.2);
     cursor:pointer;
+    transition: all .3s;
 }
 
 .imgtopradio {
@@ -771,6 +784,88 @@ a:hover {
     margin-top: 5px;
 }
 
+.footer {
+    display: -moz-grid;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+
+    width: 100%;
+    grid-auto-columns: 1fr;
+
+    -ms-grid-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+
+    justify-content: center;
+    align-items: center;
+  }
+
+a, a:hover, a:active, a:focus {
+    text-decoration: none;
+    color: #fff !important;
+}
+
+  .footer .logo {
+        width: 1fr;
+        height: 133px;
+        background: url('https://hunter.fm/img/hunterfm_logo_white.png') no-repeat center;
+  }
+
+  .footer nav {
+    display: flex;
+    justify-content: center;
+    resize: vertical;
+}
+
+.footer nav li {
+    list-style: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.footer .social {
+    color: #FFF;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    resize: vertical;
+}
+
+.footer .social li {
+    list-style: none;
+    display: inline;
+    margin: 0 6px;
+    font-size: 20px;
+}
+
+footer .copy {
+    margin: 0 auto;
+    width: 100%;
+    height: 33px;
+    text-align: center;
+    line-height: 33px;
+    font-size: 12px;
+    color: #FFF;
+}
+
+footer .copy a {
+    color: #fff;
+    transition: all .5s cubic-bezier(.68,-.55,.265,1.55);
+    font-weight: 700;
+}
+
+footer .copy a:hover {
+    color: #8400ff;
+}
 
 
 @media screen and (max-width: 1050px){
@@ -793,6 +888,11 @@ a:hover {
 
 
 @media screen and (max-width: 767px) {
+    .footer {
+        -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    }
+    
     .pos {
         position: absolute;
     }
@@ -883,3 +983,5 @@ padding-left: 5px;
       right: 35px;
     }
   }
+
+ 
