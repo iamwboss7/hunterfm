@@ -124,8 +124,8 @@ const sHunter = {
                     '<img src="' + (music[i].thumb ? music[i].thumb["MDPI"] : sHunter.imgDefault) + '">' +
                     '</div>' +
                     '<div class="infos">' +
-                    '<div class="singer">' + sHunter.montarNomes(music[i].singers) + '</div>' +
-                    '<div class="title">' + music[i].name + sHunter.montarNomes(music[i].feats, aux ? " (feat. " : " [feat. ", aux ? ")" : "]") + '</div>' +
+                    '<div class="singer"><span>' + sHunter.montarNomes(music[i].singers) + '</span></div>' +
+                    '<div class="title"><span>' + music[i].name + sHunter.montarNomes(music[i].feats, aux ? " (feat. " : " [feat. ", aux ? ")" : "]") + '</span></div>' +
                     '</div>' +
                     '</div>' +
                     '</div>'
@@ -345,10 +345,10 @@ const sHunter = {
                     '<img src="img/default_cover.jpg"/>' +
                     '</div>' +
                     '<div class="info">' +
-                    '<div class="singer">' + sHunter.montarNomes(music.singers) + '</div>' +
-                    '<div class="music">' + music.name.toLowerCase().replace(/(?:^|\s)\S/g, function (a) {
+                    '<div class="singer"><span>' + sHunter.montarNomes(music.singers) + '</span></div>' +
+                    '<div class="music"><span>' + music.name.toLowerCase().replace(/(?:^|\s)\S/g, function (a) {
                         return a.toUpperCase();
-                    }) + sHunter.montarNomes(music.feats, aux ? " (feat. " : " [feat. ", aux ? ")" : "]") + '</div>' +
+                    }) + sHunter.montarNomes(music.feats, aux ? " (feat. " : " [feat. ", aux ? ")" : "]") + '</span></div>' +
                     '</div>' +
                     '<div class="vote ' + ((music.blockVote || sHunter.sTop5.station.votes.indexOf(music.hash) > -1) ? 'on' : '') + '">' +
                     '<div class="button like">' + music.votes.like + '</div>' +
@@ -398,10 +398,10 @@ const sHunter = {
                 '<img src="img/default_cover.jpg"/>' +
                 '</div>' +
                 '<div class="info">' +
-                '<div class="singer">' + sHunter.montarNomes(music.singers) + '</div>' +
-                '<div class="music">' + music.name.toLowerCase().replace(/(?:^|\s)\S/g, function (a) {
+                '<div class="singer"><span>' + sHunter.montarNomes(music.singers) + '</span></div>' +
+                '<div class="music"><span>' + music.name.toLowerCase().replace(/(?:^|\s)\S/g, function (a) {
                     return a.toUpperCase();
-                }) + sHunter.montarNomes(music.feats, aux ? " (feat. " : " [feat. ", aux ? ")" : "]") + '</div>' +
+                }) + sHunter.montarNomes(music.feats, aux ? " (feat. " : " [feat. ", aux ? ")" : "]") + '</span></div>' +
                 '</div>' +
                 '<div class="vote ' + (music.blockVote ? '.on' : '') + '">' +
                 '<div class="button like">' + music.votes.like + '</div>' +
@@ -444,10 +444,10 @@ const sHunter = {
                 '<img src="img/default_cover.jpg"/>' +
                 '</div>' +
                 '<div class="info">' +
-                '<div class="singer">' + sHunter.montarNomes(music.singers) + '</div>' +
-                '<div class="music">' + music.name.toLowerCase().replace(/(?:^|\s)\S/g, function (a) {
+                '<div class="singer"><span>' + sHunter.montarNomes(music.singers) + '</span></div>' +
+                '<div class="music"><span>' + music.name.toLowerCase().replace(/(?:^|\s)\S/g, function (a) {
                     return a.toUpperCase();
-                }) + sHunter.montarNomes(music.feats, aux ? " (feat. " : " [feat. ", aux ? ")" : "]") + '</div>' +
+                }) + sHunter.montarNomes(music.feats, aux ? " (feat. " : " [feat. ", aux ? ")" : "]") + '</span></div>' +
                 '</div>' +
                 '<div class="vote on">' +
                 '<div class="button like not">' + music.votes.like + '</div>' +
@@ -771,7 +771,7 @@ const sHunter = {
             const res = sHunter.db.queryAll("music", {
                 query: {
                     hash: hash
-                }
+                },
             });
             return (res.length == 0) ? null : res[0];
         } catch {
