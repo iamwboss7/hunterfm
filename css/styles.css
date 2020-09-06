@@ -883,8 +883,8 @@ footer .copy a:hover {
 
 @media screen and (max-width: 1050px){
     .show_share {
-        -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     }
     #top5_box .infos {
         padding: 0;
